@@ -4,7 +4,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 
 const stripePromise = loadStripe(
-  "your publishable key"
+  "pk_test_51P9kMoSJ9mQgnAH43K4msnXImPzx4N5xDLBdGrjfgPMN2n3jN9yz7I4Km8JolXvege4kJUWaVmnzabPjgN8FRsBO00uyns212T"
 );
 
 const styles = {
