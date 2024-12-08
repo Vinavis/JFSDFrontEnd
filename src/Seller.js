@@ -26,7 +26,7 @@ const Seller = () => {
   const fetchImages = async (sellerGmail) => {
     try {
       const response = await fetch(
-        `http://localhost:8090/api/seller/images/seller/${sellerGmail}`
+        `https://mysql-production-420d.up.railway.app/seller/images/seller/${sellerGmail}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch images");
@@ -49,7 +49,7 @@ const Seller = () => {
       formData.append("itemSummary", itemSummary);
 
       const response = await fetch(
-        "http://localhost:8090/api/seller/images/upload",
+        "https://mysql-production-420d.up.railway.app/seller/images/upload",
         {
           method: "POST",
           body: formData,
@@ -81,7 +81,7 @@ const Seller = () => {
   const handleUpdate = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8090/api/seller/images/${editingImageId}`,
+        `https://mysql-production-420d.up.railway.app/seller/images/${editingImageId}`,
         {
           method: "PUT",
           headers: {
@@ -110,7 +110,7 @@ const Seller = () => {
   const handleDelete = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8090/api/seller/images/${id}`,
+        `https://mysql-production-420d.up.railway.app/seller/images/${id}`,
         {
           method: "DELETE",
         }
@@ -239,7 +239,7 @@ const Seller = () => {
                 className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105"
               >
                 <img
-                  src={`http://localhost:8090/api/seller/images/${img.name}`}
+                  src={`https://mysql-production-420d.up.railway.app/seller/images/${img.name}`}
                   alt={img.name}
                   className="w-full h-48 object-cover"
                 />

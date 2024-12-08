@@ -26,7 +26,7 @@ const Admin_Login = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8090/admin/login", {
+      const response = await fetch("https://mysql-production-420d.up.railway.app/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

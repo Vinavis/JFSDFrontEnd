@@ -21,7 +21,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:8090/api/register", {
+    fetch("https://mysql-production-420d.up.railway.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

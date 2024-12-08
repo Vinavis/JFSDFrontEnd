@@ -55,11 +55,11 @@ const CustomerPage = () => {
   const fetchProducts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8090/api/seller/images/all"
+        "https://mysql-production-420d.up.railway.app/seller/images/all"
       );
       const normalizedProducts = response.data.map((product) => ({
         ...product,
-        filePath: `http://localhost:8090/api/seller/images/${product.name}`, // Adjusted filePath for serving images
+        filePath: `https://mysql-production-420d.up.railway.app/seller/images/${product.name}`, // Adjusted filePath for serving images
       }));
       setProducts(normalizedProducts);
     } catch (error) {
@@ -87,7 +87,7 @@ const CustomerPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8090/api/cart/add",
+        "https://mysql-production-420d.up.railway.app/cart/add",
         cartItem
       );
       console.log("Response from server:", response.data); // Debug log

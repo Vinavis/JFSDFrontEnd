@@ -148,7 +148,7 @@ const CheckoutPage = () => {
       const username = localStorage.getItem("userName");
       try {
         const response = await axios.get(
-          `http://localhost:8090/api/cart/${username}`
+          `https://mysql-production-420d.up.railway.app/cart/${username}`
         );
         if (response.status === 200) {
           setCartItems(response.data);
@@ -176,7 +176,7 @@ const CheckoutPage = () => {
   const handleCheckout = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8090/api/stripe/create-session",
+        "https://mysql-production-420d.up.railway.app/stripe/create-session",
         cartItems
       );
       const sessionId = response.data;
@@ -207,7 +207,7 @@ const CheckoutPage = () => {
        }));
 
        const emailResponse = await axios.post(
-         "http://localhost:8090/api/email/send",
+         "https://mysql-production-420d.up.railway.app/email/send",
          {
            email: userEmail,
            username,

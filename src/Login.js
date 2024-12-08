@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:8090/api/login", {
+    fetch("https://mysql-production-420d.up.railway.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
