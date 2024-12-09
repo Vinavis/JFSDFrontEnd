@@ -148,7 +148,7 @@ const CheckoutPage = () => {
       const username = localStorage.getItem("userName");
       try {
         const response = await axios.get(
-          `https://mysql-production-420d.up.railway.app/cart/${username}`
+          `https://jfsdbackend-production.up.railway.app/cart/${username}`
         );
         if (response.status === 200) {
           setCartItems(response.data);
@@ -176,7 +176,7 @@ const CheckoutPage = () => {
   const handleCheckout = async () => {
     try {
       const response = await axios.post(
-        "https://mysql-production-420d.up.railway.app/stripe/create-session",
+        "https://jfsdbackend-production.up.railway.app/stripe/create-session",
         cartItems
       );
       const sessionId = response.data;
@@ -207,7 +207,7 @@ const CheckoutPage = () => {
        }));
 
        const emailResponse = await axios.post(
-         "https://mysql-production-420d.up.railway.app/email/send",
+         "https://jfsdbackend-production.up.railway.app/email/send",
          {
            email: userEmail,
            username,

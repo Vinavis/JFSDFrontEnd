@@ -20,7 +20,7 @@ const LoginSeller = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("https://mysql-production-420d.up.railway.app/seller/login", {
+    fetch("https://jfsdbackend-production.up.railway.app/seller/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

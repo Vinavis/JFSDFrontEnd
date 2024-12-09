@@ -26,7 +26,7 @@ const Seller = () => {
   const fetchImages = async (sellerGmail) => {
     try {
       const response = await fetch(
-        `https://mysql-production-420d.up.railway.app/seller/images/seller/${sellerGmail}`
+        `https://jfsdbackend-production.up.railway.app/seller/images/seller/${sellerGmail}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch images");
@@ -49,7 +49,7 @@ const Seller = () => {
       formData.append("itemSummary", itemSummary);
 
       const response = await fetch(
-        "https://mysql-production-420d.up.railway.app/seller/images/upload",
+        "https://jfsdbackend-production.up.railway.app/seller/images/upload",
         {
           method: "POST",
           body: formData,
@@ -81,7 +81,7 @@ const Seller = () => {
   const handleUpdate = async () => {
     try {
       const response = await fetch(
-        `https://mysql-production-420d.up.railway.app/seller/images/${editingImageId}`,
+        `https://jfsdbackend-production.up.railway.app/seller/images/${editingImageId}`,
         {
           method: "PUT",
           headers: {
@@ -110,7 +110,7 @@ const Seller = () => {
   const handleDelete = async (id) => {
     try {
       const response = await fetch(
-        `https://mysql-production-420d.up.railway.app/seller/images/${id}`,
+        `https://jfsdbackend-production.up.railway.app/seller/images/${id}`,
         {
           method: "DELETE",
         }
@@ -239,7 +239,7 @@ const Seller = () => {
                 className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105"
               >
                 <img
-                  src={`https://mysql-production-420d.up.railway.app/seller/images/${img.name}`}
+                  src={`https://jfsdbackend-production.up.railway.app/seller/images/${img.name}`}
                   alt={img.name}
                   className="w-full h-48 object-cover"
                 />

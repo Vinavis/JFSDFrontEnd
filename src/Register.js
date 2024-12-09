@@ -21,7 +21,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("https://mysql-production-420d.up.railway.app/register", {
+    fetch("https://jfsdbackend-production.up.railway.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

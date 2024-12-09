@@ -23,7 +23,7 @@ function EmailForm() {
 
     try {
       const response = await axios.post(
-        "https://mysql-production-420d.up.railway.app/email/send",
+        "https://jfsdbackend-production.up.railway.app/email/send",
         null,
         {
           params: { email, total: parseFloat(total) },

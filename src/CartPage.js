@@ -137,7 +137,7 @@ const CartPage = () => {
   const fetchCartItems = async () => {
     try {
       const response = await axios.get(
-        `https://mysql-production-420d.up.railway.app/cart/${userName}`
+        `https://jfsdbackend-production.up.railway.app/cart/${userName}`
       );
       setCartItems(response.data);
     } catch (error) {
@@ -148,7 +148,7 @@ const CartPage = () => {
   const updateItemCount = async (id, count) => {
     try {
       await axios.put(
-        `https://mysql-production-420d.up.railway.app/cart/updateCount/${id}/${count}`
+        `https://jfsdbackend-production.up.railway.app/cart/updateCount/${id}/${count}`
       );
       fetchCartItems();
     } catch (error) {
@@ -158,7 +158,7 @@ const CartPage = () => {
 
   const removeItem = async (id) => {
     try {
-      await axios.delete(`https://mysql-production-420d.up.railway.app/cart/remove/${id}`);
+      await axios.delete(`https://jfsdbackend-production.up.railway.app/cart/remove/${id}`);
       fetchCartItems();
     } catch (error) {
       console.error("Error removing item:", error);
